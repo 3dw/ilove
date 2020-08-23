@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <router-link to="/about">
+      <img src="../assets/main.jpg">
+    </router-link>
   </div>
 </template>
 
@@ -28,5 +31,8 @@ li {
 }
 a {
   color: #42b983;
+}
+img {
+  width: 40vw;
 }
 </style>

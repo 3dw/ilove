@@ -1,10 +1,17 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">首頁</router-link> |
+      <router-link to="/about">理念</router-link> |
+      <router-link to="/facebook">臉書</router-link> |
+      <router-link to="/sell">義賣</router-link>
     </div>
     <router-view/>
+    <div id = "flower" class="float">
+      <router-link to="/">
+        <img src="./assets/flower.svg"/>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -15,6 +22,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+a {
+  cursor: pointer !important;
 }
 
 #nav {
@@ -28,5 +39,16 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+#flower {
+  position: fixed;
+  bottom: 5vh;
+  left: 5vw;
+}
+#flower img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer !important;
 }
 </style>
