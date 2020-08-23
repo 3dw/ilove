@@ -6,7 +6,9 @@
       <router-link to="/facebook">臉書</router-link> |
       <router-link to="/sell">義賣</router-link>
     </div>
-    <router-view/>
+    <div id ="view">
+      <router-view/>
+    </div>
     <div id = "flower" class="float">
       <router-link id = "a" to="/">首頁</router-link>
       <router-link id = "b" to="/about">理念</router-link>
@@ -25,6 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#view {
+  width: 100vw;
+  margin-bottom: 250px;
 }
 
 a {
