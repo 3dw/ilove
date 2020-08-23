@@ -8,6 +8,9 @@
     </div>
     <router-view/>
     <div id = "flower" class="float">
+      <router-link id = "a" to="/">首頁</router-link>
+      <router-link id = "b" to="/about">理念</router-link>
+      <router-link id = "c" to="/facebook">臉書</router-link>
       <router-link to="/">
         <img src="./assets/flower.svg"/>
       </router-link>
@@ -44,11 +47,43 @@ a {
 #flower {
   position: fixed;
   bottom: 5vh;
-  left: 5vw;
+  left: 50px;
 }
+
 #flower img {
   width: 100px;
   height: 100px;
   cursor: pointer !important;
 }
+
+#a {
+  position: absolute;
+  top: -25px;
+  left: 25px;
+  width: 3em;
+}
+
+#b {
+  position: absolute;
+  top: 66px;
+  left: 90px;
+  width: 3em;
+}
+
+#c {
+  position: absolute;
+  top: 66px;
+  left: -35px;
+  width: 3em;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a.router-link-exact-active {
+  color: red;
+}
+
 </style>
