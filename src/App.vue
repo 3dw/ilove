@@ -51,7 +51,7 @@ a {
   opacity: 0.62;
   position: fixed;
   top: 5vh;
-  left: 50px;
+  right: 50px;
   transition: all .5s ease;
 }
 
