@@ -5,7 +5,7 @@
     </div>
     <div id = "flower" class="float">
       <router-link id = "a" to="/">首頁</router-link>
-      <router-link id = "b" to="/about">理念</router-link>
+      <router-link id = "b" to="/sell">義賣</router-link>
       <router-link id = "c" to="/facebook">臉書</router-link>
       <router-link id = "d" to="/people">人物</router-link>
       <router-link id = "e" to="/activity">活動</router-link>
