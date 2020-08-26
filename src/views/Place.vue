@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <iframe src="http://www.pos-bieipo.com/farm/"></iframe>
+    <iframe src="https://www.pos-bieipo.com/farm/"></iframe>
   </div>
 </template>
 
