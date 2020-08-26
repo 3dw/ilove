@@ -33,6 +33,6 @@ a {
   color: #42b983;
 }
 img {
-  width: 40vw;
+  width: 60vmin;
 }
 </style>

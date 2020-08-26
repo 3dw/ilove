@@ -1,11 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">首頁</router-link> |
-      <router-link to="/about">理念</router-link> |
-      <router-link to="/facebook">臉書</router-link> |
-      <router-link to="/sell">義賣</router-link>
-    </div>
     <div id ="view">
       <router-view/>
     </div>
@@ -13,6 +7,9 @@
       <router-link id = "a" to="/">首頁</router-link>
       <router-link id = "b" to="/about">理念</router-link>
       <router-link id = "c" to="/facebook">臉書</router-link>
+      <router-link id = "d" to="/people">人物</router-link>
+      <router-link id = "e" to="/activity">活動</router-link>
+      <router-link id = "f" to="/place">場地</router-link>
       <router-link to="/">
         <img src="./assets/flower.svg"/>
       </router-link>
@@ -81,6 +78,27 @@ a {
   position: absolute;
   top: 66px;
   left: -35px;
+  width: 3em;
+}
+
+#d {
+  position: absolute;
+  top: 100px;
+  left: 25px;
+  width: 3em;
+}
+
+#e {
+  position: absolute;
+  top: 15px;
+  left: -35px;
+  width: 3em;
+}
+
+#f {
+  position: absolute;
+  top: 15px;
+  left: 90px;
   width: 3em;
 }
 

@@ -24,6 +24,21 @@ Vue.use(VueRouter)
     path: '/sell',
     name: 'Sell',
     component: () => import('../views/Sell.vue')
+  },
+  {
+    path: '/people',
+    name: 'People',
+    component: () => import('../views/People.vue')
+  },
+  {
+    path: '/place',
+    name: 'Place',
+    component: () => import('../views/Place.vue')
+  },
+  {
+    path: '/activity',
+    name: 'Activity',
+    component: () => import('../views/Activity.vue')
   }
 ]
 
