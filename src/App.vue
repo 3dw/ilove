@@ -28,7 +28,6 @@
 
 #view {
   width: 100vw;
-  margin-bottom: 250px;
 }
 
 a {
@@ -49,9 +48,27 @@ a {
 }
 
 #flower {
+  opacity: 0.62;
   position: fixed;
-  bottom: 5vh;
+  top: 5vh;
   left: 50px;
+  transition: all .5s ease;
+}
+
+#flower a {
+  transition: all .5s ease;  
+}
+
+#flower:hover {
+  opacity: 1;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#flower:hover a {
+  padding: 3px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 #flower img {
