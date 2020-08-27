@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="我愛玩學校"/>
+    <HelloWorld msg="我愛玩學校" @nav = "nav()"/>
     <p>我是誰？是為了 體驗自己 我 而創造
     <br/>玩 是宇宙唯一的事 是心事 我是誰？
     <br/>是為了 體驗自己 我 而創造
@@ -17,7 +17,7 @@
     <br/>
     <p>校 調教準 喜悅興奮 是關鍵羅盤指南針</p>
     <br/>
-    <h3><router-link to="/people">我愛玩學校</router-link></h3>
+    <h3><a @click="nav()">我愛玩學校</a></h3>
   </div>
 </template>
 
@@ -29,6 +29,11 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  methods: {
+    nav () {
+      this.$emit('nav')
+    }
   }
 }
 </script>

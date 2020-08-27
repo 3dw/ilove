@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id ="view">
-      <router-view/>
+      <router-view @nav = "bigFlower = !bigFlower"/>
     </div>
     <div id = "flower" class="float" :class = "{ big: bigFlower }">
       <router-link id = "a" to="/">首頁</router-link>
@@ -24,6 +24,11 @@ export default {
   data () {
     return {
         bigFlower: false
+    }
+  },
+  watch: {
+    $route() {
+      this.bigFlower = false;
     }
   }
 } 
