@@ -88,7 +88,7 @@ a {
   border-radius: 50%;
 }
 
-#flower:hover a {
+#flower:hover a, #flower.big a {
   padding: 3px;
   background-color: white;
   border-radius: 50%;
