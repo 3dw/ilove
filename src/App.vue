@@ -3,19 +3,32 @@
     <div id ="view">
       <router-view/>
     </div>
-    <div id = "flower" class="float">
+    <div id = "flower" class="float" :class = "{ big: bigFlower }">
       <router-link id = "a" to="/">首頁</router-link>
       <router-link id = "b" to="/sell">義賣</router-link>
       <router-link id = "c" to="/facebook">臉書</router-link>
       <router-link id = "d" to="/people">人物</router-link>
       <router-link id = "e" to="/activity">活動</router-link>
       <router-link id = "f" to="/place">場地</router-link>
-      <router-link to="/">
+      <a @click = "bigFlower = !bigFlower">
         <img src="./assets/flower.svg"/>
-      </router-link>
+      </a>
     </div>
   </div>
 </template>
+
+<script type="text/javascript">
+
+export default {
+  name: 'App',
+  data () {
+    return {
+        bigFlower: false
+    }
+  }
+} 
+
+</script>
 
 <style>
 #app {
@@ -53,10 +66,17 @@ a {
   top: 5vh;
   right: 50px;
   transition: all .5s ease;
+  transform: scale(1);
+  transform-origin: 150% -20%;
 }
 
 #flower a {
   transition: all .5s ease;  
+}
+
+#flower.big {
+  transform: scale(2);
+  transform-origin: 150% -20%;
 }
 
 #flower:hover {
