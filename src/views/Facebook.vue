@@ -11,7 +11,7 @@ img {
 }
 
 iframe {
-  background: url('/img/loading.gif') no-repeat center;
+  background: url('../assets/loading.gif') no-repeat center;
 }
 
 </style>

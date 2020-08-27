@@ -9,7 +9,7 @@
 iframe {
     width: 100vw;
     height: 100vh;
-    background: url('/img/loading.gif') no-repeat center;
+    background: url('../assets/loading.gif') no-repeat center;
 }
 
 </style>
