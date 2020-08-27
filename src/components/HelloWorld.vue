@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <router-link to="/about">
+    <router-link to="/people">
       <img src="../assets/main.jpg">
     </router-link>
   </div>
