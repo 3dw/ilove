@@ -9,4 +9,9 @@
 img {
   width: 60vmin;
 }
+
+iframe {
+  background: url('/img/loading.gif') no-repeat center;
+}
+
 </style>
