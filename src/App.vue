@@ -77,6 +77,9 @@ a {
 #flower.big {
   transform: scale(2);
   transform-origin: 150% -20%;
+  opacity: 1;
+  background-color: white;
+  border-radius: 50%;
 }
 
 #flower:hover {
