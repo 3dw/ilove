@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <h1>義賣</h1>
     <div class="ui cards">
         <div class="ui card" v-for = "i in items" :key="i.t">
             <h3 class="ui header">
@@ -36,9 +37,12 @@ export default {
 
 <style type="text/css" scoped="">
   
+img {
+  width: 100%;
+}
 
-  img {
-    width: 100%;
-  }
+p {
+  text-align: left;
+}
 
 </style>

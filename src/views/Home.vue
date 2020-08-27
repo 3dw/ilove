@@ -17,7 +17,7 @@
     <br/>
     <p>校 調教準 喜悅興奮 是關鍵羅盤指南針</p>
     <br/>
-    <h3><router-link to="/facebook">我愛玩學校</router-link></h3>
+    <h3><router-link to="/people">我愛玩學校</router-link></h3>
   </div>
 </template>
 

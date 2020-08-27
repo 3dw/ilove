@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <router-link to="/people">
-      <img src="../assets/main.jpg">
+      <img src="../assets/main2.jpg">
     </router-link>
   </div>
 </template>

@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <h1>人物</h1>
     <div class="ui six doubling cards">
       <div class="ui card" v-for="p in people" :key="p.n">
         <div v-if="p.i" class="image">
