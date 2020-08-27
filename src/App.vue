@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <div id ="view">
-      <router-view @nav = "bigFlower = !bigFlower"/>
-    </div>
-    <div id = "flower" class="float" :class = "{ big: bigFlower }">
+    <div id = "flower" :class = "{ big: bigFlower }">
       <router-link id = "a" to="/">首頁</router-link>
       <router-link id = "b" to="/sell">義賣</router-link>
       <router-link id = "c" to="/facebook">臉書</router-link>
@@ -13,6 +10,9 @@
       <a @click = "bigFlower = !bigFlower">
         <img src="./assets/flower.svg"/>
       </a>
+    </div>
+    <div id ="view">
+      <router-view @nav = "bigFlower = !bigFlower"/>
     </div>
   </div>
 </template>
@@ -68,6 +68,7 @@ a {
 #flower {
   opacity: 0.62;
   position: fixed;
+  z-index: 999;
   top: 5vh;
   right: 50px;
   transition: all .5s ease;
@@ -76,7 +77,9 @@ a {
 }
 
 #flower a {
-  transition: all .5s ease;  
+  transition: all .5s ease;
+  z-index: 999;  
+  cursor: pointer !important;
 }
 
 #flower.big {
@@ -102,7 +105,6 @@ a {
 #flower img {
   width: 100px;
   height: 100px;
-  cursor: pointer !important;
 }
 
 #a {
