@@ -37,6 +37,6 @@ export default {
 
 <style type="text/css" scoped="">
 	img {
-		width: 100%;
+    height: 200px;
 	}
 </style>
