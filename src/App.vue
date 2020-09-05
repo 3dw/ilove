@@ -42,6 +42,12 @@ export default {
 </script>
 
 <style>
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -51,7 +57,7 @@ export default {
 }
 
 #view {
-  width: 100vw;
+  width: 95vw;
 }
 
 a {
@@ -75,7 +81,7 @@ a {
   position: fixed;
   z-index: 999;
   top: 12vh;
-  left: 50px;
+  right: 150px;
   transition: all .5s ease;
   transform: scale(1);
   transform-origin: 0 0;
