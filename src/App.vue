@@ -74,11 +74,11 @@ a {
 #flower {
   position: fixed;
   z-index: 999;
-  top: 5vh;
-  right: 150px;
+  top: 12vh;
+  left: 50px;
   transition: all .5s ease;
   transform: scale(1);
-  transform-origin: center;
+  transform-origin: 0 0;
 }
 
 #flower a {
@@ -112,6 +112,8 @@ a {
   position: absolute;
   left: 0;
   top: 0;
+  background-color: white;
+  border-radius: 50%;
 }
 
 #a {
