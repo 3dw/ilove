@@ -19,6 +19,9 @@
 
 <script type="text/javascript">
 
+import $ from 'jquery'
+import 'jquery-ui-dist/jquery-ui'
+
 export default {
   name: 'App',
   data () {
@@ -30,6 +33,9 @@ export default {
     $route() {
       this.bigFlower = false;
     }
+  },
+  mounted () {
+    $('#flower').draggable();
   }
 } 
 
@@ -66,14 +72,13 @@ a {
 }
 
 #flower {
-  opacity: 0.62;
   position: fixed;
   z-index: 999;
   top: 5vh;
-  right: 50px;
+  right: 150px;
   transition: all .5s ease;
   transform: scale(1);
-  transform-origin: 150% -20%;
+  transform-origin: center;
 }
 
 #flower a {
@@ -84,7 +89,6 @@ a {
 
 #flower.big {
   transform: scale(2);
-  transform-origin: 150% -20%;
   opacity: 1;
   background-color: white;
   border-radius: 50%;
@@ -105,6 +109,9 @@ a {
 #flower img {
   width: 100px;
   height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 #a {
