@@ -21,6 +21,7 @@
 
 import $ from 'jquery'
 import 'jquery-ui-dist/jquery-ui'
+import FastClick from 'fastclick'
 
 window.jQuery = $
 require('jquery-ui-touch-punch')
@@ -38,6 +39,7 @@ export default {
     }
   },
   mounted () {
+    FastClick.attach(document.body);
     $('#flower').draggable();
   }
 } 
@@ -84,7 +86,7 @@ a {
   position: fixed;
   z-index: 999;
   top: 12vh;
-  right: 150px;
+  right: 250px;
   transition: all .5s ease;
   transform: scale(1);
   transform-origin: 0 0;
@@ -94,6 +96,8 @@ a {
   transition: all .5s ease;
   z-index: 999;  
   cursor: pointer !important;
+  background-color: white;
+  border-radius: 50%;
 }
 
 #flower.big {
@@ -111,8 +115,6 @@ a {
 
 #flower:hover a, #flower.big a {
   padding: 3px;
-  background-color: white;
-  border-radius: 50%;
 }
 
 #flower img {
