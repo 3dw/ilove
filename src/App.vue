@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <div id = "flower" :class = "{ big: bigFlower }">
-      <router-link id = "a" to="/">首頁</router-link>
-      <router-link id = "b" to="/sell">義賣</router-link>
-      <router-link id = "c" to="/facebook">臉書</router-link>
-      <router-link id = "d" to="/people">人物</router-link>
-      <router-link id = "e" to="/activity">活動</router-link>
-      <router-link id = "f" to="/place">場地</router-link>
-      <a @click = "bigFlower = !bigFlower">
+    <div id = "flower" :class = "{ big: bigFlower }"  v-touch:moving="move">
+      <a id = "a" v-touch:tap = "() => go('/')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/' }">首頁</a>
+      <a id = "b" v-touch:tap = "() => go('/sell')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/sell' }">義賣</a>
+      <a id = "c" v-touch:tap = "() => go('/facebook')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/facebook' }">臉書</a>
+      <a id = "d" v-touch:tap = "() => go('/people')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/people' }">人物</a>
+      <a id = "e" v-touch:tap = "() => go('/activity')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/activity' }">活動</a>
+      <a id = "f" v-touch:tap = "() => go('/place')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/place' }">場地</a>
+      <a v-touch:tap = "bigFlower = !bigFlower">
         <img src="./assets/flower.svg"/>
       </a>
     </div>
@@ -21,10 +21,10 @@
 
 import $ from 'jquery'
 import 'jquery-ui-dist/jquery-ui'
-import FastClick from 'fastclick'
+// import FastClick from 'fastclick'
 
 window.jQuery = $
-require('jquery-ui-touch-punch')
+// require('jquery-ui-touch-punch')
 
 export default {
   name: 'App',
@@ -38,9 +38,22 @@ export default {
       this.bigFlower = false;
     }
   },
+  methods: {
+    go (r) {
+      this.$router.push(r);
+    },
+    move (e) {
+      if (window.parent === window) {
+        var clientX = e.touches[0].clientX;
+        var clientY = e.touches[0].clientY;
+        console.log(clientX);
+        console.log(clientY);
+        $('#flower').css("left", clientX).css("top", clientY).css("z-index", 999);
+      }
+    }
+  },
   mounted () {
-    FastClick.attach(document.body);
-    $('#flower').draggable();
+    // $('#flower').draggable();
   }
 } 
 
@@ -78,7 +91,7 @@ a {
   color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
+#nav a.a-exact-active {
   color: #42b983;
 }
 
@@ -174,8 +187,12 @@ a {
   color: blue;
 }
 
-a.router-link-exact-active {
+a.router-exact-active {
   color: red;
+}
+
+iframe {
+  z-index: -999;
 }
 
 </style>
