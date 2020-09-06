@@ -7,7 +7,7 @@
       <a id = "d" v-touch:tap = "() => go('/people')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/people' }">人物</a>
       <a id = "e" v-touch:tap = "() => go('/activity')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/activity' }">活動</a>
       <a id = "f" v-touch:tap = "() => go('/place')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/place' }">場地</a>
-      <a v-touch:tap = "bigFlower = !bigFlower">
+      <a id = "life" @click = "bigFlower = !bigFlower">
         <img src="./assets/flower.svg"/>
       </a>
     </div>
@@ -128,6 +128,10 @@ a {
 
 #flower:hover a, #flower.big a {
   padding: 3px;
+}
+
+#life {
+  background-color: transparent;
 }
 
 #flower img {
