@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>義賣</h1>
-    <div class="ui cards">
+    <div class="ui four doubling cards">
         <div class="ui card" v-for = "i in items" :key="i.t">
             <h3 class="ui header">
               <a href="i.u">{{ i.t }} -- {{ i.p }}</a>
@@ -11,6 +11,9 @@
                 <img :src="'./img/' + i.i" />
               </a>
             </div>
+            <h3 class="ui header">
+              <a href="i.u">{{ i.t }} -- {{ i.p }}</a>
+            </h3>
             <p class="description">
               {{ i.d }}
             </p>

@@ -43,7 +43,7 @@ export default {
       this.$router.push(r);
     },
     move (e) {
-      if (window.parent === window) {
+      if (window.parent === window && e.touches) {
         var clientX = e.touches[0].clientX;
         var clientY = e.touches[0].clientY;
         console.log(clientX);
@@ -53,7 +53,7 @@ export default {
     }
   },
   mounted () {
-    // $('#flower').draggable();
+    $('#flower').draggable();
   }
 } 
 
