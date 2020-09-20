@@ -60,6 +60,10 @@ export default {
     white-space: pre-line;
   }
 
+  .description {
+    padding: 0 .6em;
+  }
+
   .img {
     width: 100%;
     height: 40vmin;
