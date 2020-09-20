@@ -3,13 +3,16 @@
     <h1>人物</h1>
     <div class="ui four doubling cards">
       <div class="ui card" v-for="p in people" :key="p.n">
-        <div v-if="p.i" class="image">
-          <a v-if="p.f" :href="p.f" target="_blank">
-            <img :src="'./img/' + p.i" />
-          </a>
-        </div>
+        <a v-if="p.i" class="image" @click="p.more = !p.more">
+          <!--<a v-if="p.f" :href="p.f" target="_blank"> -->
+            <div class="img" :style="{ 'background-image': 'url(./img/' + p.i + ')' }" />
+          <!-- </a> -->
+        </a>
         <h1>{{ p.n }}</h1>
-        <p class = "description" v-if="p.d">{{p.d}}</p>
+        <p class = "description" v-if="p.d">
+          <span v-if = "p.more">{{p.d}}</span>
+          <a v-else @click="p.more = true"> {{p.d.substr(0,20)}}...瞭解更多</a>
+        </p>
       </div>
     </div>
   </div>
@@ -23,12 +26,12 @@ export default {
   data () {
     return {
         people: [
-            {n: '波哥', f: 'https://www.facebook.com/profile.php?id=100008017516957', i:'po.jpg'},
-            {n: '波嫂', f: 'https://www.facebook.com/profile.php?id=100012476358849', i:'po_sau.jpg'},
-            {n: '世銘', f: 'https://www.facebook.com/profile.php?id=100000216159690', i:'shi_ming.jpg'},
-            {n: '士娟', f: 'https://www.facebook.com/profile.php?id=1681455094', i:'shi_juan.jpg'},
-            {n: '春和', f: 'https://www.facebook.com/earthenLee', i:'chun_he.jpg'},
-            {n: '秀麗', f: 'https://www.facebook.com/singsonglife', i:'show_lee.jpg', d: `稱號：酵長
+            {n: '波哥', f: 'https://www.facebook.com/profile.php?id=100008017516957', i:'po.jpg', more: false},
+            {n: '波嫂', f: 'https://www.facebook.com/profile.php?id=100012476358849', i:'po_sau.jpg', more: false},
+            {n: '世銘', f: 'https://www.facebook.com/profile.php?id=100000216159690', i:'shi_ming.jpg', more: false},
+            {n: '士娟', f: 'https://www.facebook.com/profile.php?id=1681455094', i:'shi_juan.jpg', more: false},
+            {n: '春和', f: 'https://www.facebook.com/earthenLee', i:'chun_he.jpg', more: false},
+            {n: '秀麗', f: 'https://www.facebook.com/singsonglife', i:'show_lee.jpg', more: false, d: `稱號：酵長
 
 經歷：
 
@@ -40,11 +43,6 @@ export default {
 
 我們都是來「𨑨迌」的，「我 愛 玩」學校，就是唱歌、跳舞而已，我們就是「光」，想哭就哭、想笑就笑，開啟天人合一的「全息宇宙」觀，自己調頻、自己轉台， 我們都在平行宇宙中穿梭，透過找到自己、療癒自己，也就療癒了地球。(love)(love)(love)
 
-通訊錄資料：
-
-名稱：許秀麗
-電話：0935-373106
-居住地：台中
 興趣專長：拈花惹草/愛𨑨迌
 產業別：花卉/園藝`}
         ]
@@ -56,12 +54,16 @@ export default {
 </script>
 
 <style type="text/css" scoped="">
-	img {
-    height: 200px;
-	}
 
   p {
     text-align: left;
     white-space: pre-line;
+  }
+
+  .img {
+    width: 100%;
+    height: 40vmin;
+    background-size: cover; 
+    background-position: center;
   }
 </style>
