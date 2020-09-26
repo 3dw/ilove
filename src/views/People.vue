@@ -4,9 +4,7 @@
     <div class="ui four doubling cards">
       <div class="ui card" v-for="p in people" :key="p.n">
         <a v-if="p.i" class="image" @click="p.more = !p.more">
-          <!--<a v-if="p.f" :href="p.f" target="_blank"> -->
             <div class="img" :style="{ 'background-image': 'url(./img/' + p.i + ')' }" />
-          <!-- </a> -->
         </a>
         <h1>{{ p.n }}</h1>
         <p class = "description" v-if="p.d">
