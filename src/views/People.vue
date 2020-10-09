@@ -1,16 +1,18 @@
 <template>
   <div class="about">
     <h1>人物</h1>
-    <div class="ui four doubling cards">
-      <div class="ui card" v-for="p in people" :key="p.n">
-        <a v-if="p.i" class="image" @click="p.more = !p.more">
-            <div class="img" :style="{ 'background-image': 'url(./img/' + p.i + ')' }" />
-        </a>
-        <h1>{{ p.n }}</h1>
-        <p class = "description" v-if="p.d">
-          <span v-if = "p.more">{{p.d}}</span>
-          <a v-else @click="p.more = true"> {{p.d.substr(0,20)}}...瞭解更多</a>
-        </p>
+    <div class="ui container">
+      <div class="ui four doubling cards">
+        <div class="ui card" v-for="p in people" :key="p.n">
+          <a v-if="p.i" class="image" @click="p.more = !p.more">
+              <div class="img" :style="{ 'background-image': 'url(./img/' + p.i + ')' }" />
+          </a>
+          <h1>{{ p.n }}</h1>
+          <p class = "description" v-if="p.d">
+            <span v-if = "p.more">{{p.d}}</span>
+            <a v-else @click="p.more = true"> {{p.d.substr(0,20)}}...瞭解更多</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>

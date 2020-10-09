@@ -2,26 +2,28 @@
   <div class="about">
     <h1>義賣</h1>
     <h4>電話：03-9232209  手機：0972-935-839</h4>
-    <div class="ui four doubling cards">
-        <div class="ui card" v-for = "i in items" :key="i.t">
-            <h3 class="ui header">
-              <a href="i.u">{{ i.t }} ─ {{ i.p }}</a>
-            </h3>
-            <div v-if="i.i" class="image">
-              <a :href="i.u || './img/' + i.i" target="_blank">
-                 <div class="img" :style="{ 'background-image': 'url(./img/' + i.i + ')' }" />
-              </a>
-            </div>
-            <h3 class="ui header">
-              <a href="i.u">{{ i.t }} ─ {{ i.p }}</a>
-            </h3>
-            <p class="description">
-              {{ i.d }}
-              <span v-if="i.imgs">
-                <img v-for = "m in i.imgs" :src="'./img/' + m" :key="m"/>
-              </span>
-            </p>
-        </div>
+    <div class="ui container">
+      <div class="ui four doubling cards">
+          <div class="ui card" v-for = "i in items" :key="i.t">
+              <h3 class="ui header">
+                <a href="i.u">{{ i.t }} ─ {{ i.p }}</a>
+              </h3>
+              <div v-if="i.i" class="image">
+                <a :href="i.u || './img/' + i.i" target="_blank">
+                   <div class="img" :style="{ 'background-image': 'url(./img/' + i.i + ')' }" />
+                </a>
+              </div>
+              <h3 class="ui header">
+                <a href="i.u">{{ i.t }} ─ {{ i.p }}</a>
+              </h3>
+              <p class="description">
+                {{ i.d }}
+                <span v-if="i.imgs">
+                  <img v-for = "m in i.imgs" :src="'./img/' + m" :key="m"/>
+                </span>
+              </p>
+          </div>
+      </div>
     </div>
   </div>
 </template>
@@ -66,6 +68,7 @@ img {
 
 p {
   text-align: left;
+  padding: 2px;
 }
 
 .img {
