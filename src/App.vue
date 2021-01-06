@@ -8,7 +8,7 @@
       <a id = "e" v-touch:tap = "() => go('/activity')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/activity' }">活動</a>
       <a id = "f" v-touch:tap = "() => go('/place')" :class = "{ 'router-exact-active': this.$router.currentRoute.path === '/place' }">場地</a>
       <a id = "life" @click = "bigFlower = !bigFlower">
-        <img src="./assets/flower.svg"/>
+        <img src="./assets/flower.svg" alt="flower"/>
       </a>
     </div>
     <div id ="view">
